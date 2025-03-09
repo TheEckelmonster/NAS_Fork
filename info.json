@@ -1,0 +1,9 @@
+{
+	"name": "NAS_Fork",
+	"version": "0.1.0",
+	"factorio_version": "2.0",
+  "dependencies": ["base >= 2.0"],
+	"title": "NAS Fork",
+	"author": "TheEckelmonster",
+	"description": "Fork of Nuclear Artillery Shell, updated to 2.0."
+}
