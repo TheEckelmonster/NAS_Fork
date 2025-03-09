@@ -46,7 +46,7 @@ data:extend(
 			type = "recipe",
 			name = "artillery-shell-nuclear",
 			enabled = false,
-			energy_required = 120,
+			energy_required = 50,
 			ingredients =
 			{
 				{type = "item", name = "artillery-shell", amount = 1},
