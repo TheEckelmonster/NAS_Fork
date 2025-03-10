@@ -15,7 +15,8 @@ data:extend(
 			name = "artillery-shell-nuclear",
 			icon = "__NAS_Fork__/graphics/artillery-shell-nuclear.png",
 			icon_size = 32,
-			ammo_category = "artillery-shell",
+			-- ammo_category = "artillery-shell",
+			ammo_category = "rocket",
 			ammo_type =
 			{
 				category = "artillery-shell",
