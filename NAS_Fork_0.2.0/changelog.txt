@@ -1,12 +1,12 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.0
-Date: 03. 10. 2025
+Date: 10. 03. 2025
   Features:
     - Added Space Age as an optional dependency
     - Uranium-235 cost will now automatically change depending on if Space Age is enabled or not
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.1
-Date: 03. 09. 2025
+Date: 09. 03. 2025
   Bugfixes:
     - Reset crafting time to original 50 seconds
 ---------------------------------------------------------------------------------------------------
