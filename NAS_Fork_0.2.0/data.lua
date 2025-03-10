@@ -7,6 +7,12 @@ for k, v in pairs(data.raw["projectile"]["atomic-rocket"].action.action_delivery
 	table.insert(nuclear_artillery_projectile.action.action_delivery.target_effects, v)
 end
 
+local uranium_cost = 30
+
+if mods ["space-age"] then
+	uranium_cost = 100
+end
+
 data:extend(
 	{
 		nuclear_artillery_projectile,
@@ -15,8 +21,7 @@ data:extend(
 			name = "artillery-shell-nuclear",
 			icon = "__NAS_Fork__/graphics/artillery-shell-nuclear.png",
 			icon_size = 32,
-			-- ammo_category = "artillery-shell",
-			ammo_category = "rocket",
+			ammo_category = "artillery-shell",
 			ammo_type =
 			{
 				category = "artillery-shell",
@@ -51,7 +56,7 @@ data:extend(
 			ingredients =
 			{
 				{type = "item", name = "artillery-shell", amount = 1},
-				{type = "item", name = "uranium-235", amount = 100}
+				{type = "item", name = "uranium-235", amount = uranium_cost}
 			},
 			results = {{type = "item", name = "artillery-shell-nuclear", amount = 1}}
 		},
