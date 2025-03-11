@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.1
+Date: 11. 03. 2025
+  Bugfixes:
+    - Removed the Space science requirement, as it wasn't present in the original mod by Aephiex
+    - Fixed spelling of 'nuclear' in [technology-description] artillery-shell-nuclear
+---------------------------------------------------------------------------------------------------
 Version: 0.2.0
 Date: 10. 03. 2025
   Features:
