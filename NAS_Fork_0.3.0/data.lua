@@ -1,9 +1,12 @@
 
 -- nuclear artillery shell
+local atomic_artillery = require("prototypes.atomic-artillery-projectile")
+
 local nuclear_artillery_projectile = util.table.deepcopy(data.raw["artillery-projectile"]["artillery-projectile"])
 nuclear_artillery_projectile.name = "artillery-projectile-nuclear"
 
-for k, v in pairs(data.raw["projectile"]["atomic-rocket"].action.action_delivery.target_effects) do
+-- for k, v in pairs(data.raw["projectile"]["atomic-rocket"].action.action_delivery.target_effects) do
+for k, v in pairs(atomic_artillery.action.action_delivery.target_effects) do
 	table.insert(nuclear_artillery_projectile.action.action_delivery.target_effects, v)
 end
 
