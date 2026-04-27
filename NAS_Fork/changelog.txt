@@ -1,0 +1,54 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.3.0
+Date: 2026-04-27
+  Features:
+    - Updated graphic (setting available for the previous graphic if desired)
+    - Added several configurable settings for the Nuclear artillery shell item, recipe, and technology
+      - Configurable settings for:
+        - Weight modifier
+        - Stack size
+        - Crafting time
+        - Recipe (ingredients/inputs)
+        - Results (output(s))
+        - (Default) crafting machine
+        - Additional crafting machines
+        - Emissions multiplier
+        - Research prerequisites
+        - Research ingredients
+        - Research time
+        - Research count
+    - Changed the default technology requirements: (can be modified with the above settings)
+      - Research count: 1000 -> 5000
+      - Research time:  15s  -> 60s
+      - Research prerequisites: (added science packs required for artillery and atomic-bombs in each context)
+        - [Vanilla] added:
+          - Production-science-pack
+        - [Space-Age] added:
+          - Metallurgic-science-pack & space-science-pack
+        - [Space-Exploration] added:
+          - Space-science-pack & production-science-pack
+          - Removed utility-science-pack
+  Compatibility:
+    - Added Space-Exploration as an optional dependency
+---------------------------------------------------------------------------------------------------
+Version: 0.2.1
+Date: 2025-03-11
+  Bugfixes:
+    - Removed the Space science requirement, as it wasn't present in the original mod by Aephiex
+    - Fixed spelling of 'nuclear' in [technology-description] artillery-shell-nuclear
+---------------------------------------------------------------------------------------------------
+Version: 0.2.0
+Date: 2025-03-10
+  Features:
+    - Added Space Age as an optional dependency
+    - Uranium-235 cost will now automatically change depending on if Space Age is enabled or not
+---------------------------------------------------------------------------------------------------
+Version: 0.1.1
+Date: 2025-03-09
+  Bugfixes:
+    - Reset crafting time to original 50 seconds
+---------------------------------------------------------------------------------------------------
+Version: 0.1.0
+Date: 2025-03-09
+  Features:
+    - Initial release.

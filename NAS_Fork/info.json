@@ -1,0 +1,15 @@
+{
+	"name": "NAS_Fork",
+	"version": "0.3.0",
+	"factorio_version": "2.0",
+	"title": "Configurable Nuclear Artillery Shell",
+	"author": "TheEckelmonster",
+	"description": "Fork of \"Nuclear Artillery Shell\" by Aephiex, updated to 2.0.\n\nIncludes several configurable settings to allow for customization of the item, recipe, and technology.",
+    "dependencies": [
+		"base >= 2.0.76",
+        "TheEckelmonster-core-library >= 0.1.2",
+        "TheEckelmonster-core-library < 1.0.0",
+    	"? space-age >= 2.0.76",
+        "? space-exploration >= 0.7.54"
+	]
+}
