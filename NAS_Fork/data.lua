@@ -1,6 +1,9 @@
 
 -- nuclear artillery shell
-local atomic_artillery = require("prototypes.atomic-artillery-projectile")
+require("prototypes.atomic-artillery-projectile")
+
+
+local atomic_artillery = data.raw["artillery-projectile"]["atomic-artillery"]
 
 local nuclear_artillery_projectile = util.table.deepcopy(data.raw["artillery-projectile"]["artillery-projectile"])
 nuclear_artillery_projectile.name = "artillery-projectile-nuclear"

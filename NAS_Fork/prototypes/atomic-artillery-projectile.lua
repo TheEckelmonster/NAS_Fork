@@ -1,7 +1,6 @@
-local explosion_animations = require("prototypes.entity.explosion-animations")
-local smoke_animations = require("prototypes.entity.smoke-animations")
-local smoke_animations = require("prototypes.entity.smoke-animations")
-local sounds = require("prototypes.entity.sounds")
+local explosion_animations = require("__base__.prototypes.entity.explosion-animations")
+local smoke_animations = require("__base__.prototypes.entity.smoke-animations")
+local sounds = require("__base__.prototypes.entity.sounds")
 
 local max_nuke_shockwave_movement_distance_deviation = 2
 
@@ -204,10 +203,12 @@ data:extend({
   },
 
   {
-    type = "projectile",
-    name = "atomic-bomb-wave",
+    type = "artillery-projectile",
+    name = "atomic-artillery-wave",
     flags = {"not-on-map"},
     hidden = true,
+    reveal_map = true,
+    map_color = {1, 1, 0},
     acceleration = 0,
     speed_modifier = { 1.0, 0.707 },
     action =
@@ -237,10 +238,12 @@ data:extend({
   },
 
   {
-    type = "projectile",
-    name = "atomic-bomb-ground-zero-projectile",
+    type = "artillery-projectile",
+    name = "atomic-artillery-ground-zero-projectile",
     flags = {"not-on-map"},
     hidden = true,
+    reveal_map = true,
+    map_color = {1, 1, 0},
     acceleration = 0,
     speed_modifier = { 1.0, 0.707 },
     action =
@@ -357,6 +360,8 @@ data:extend({
     name = "atomic-artillery",
     flags = {"not-on-map"},
     hidden = true,
+    reveal_map = true,
+    map_color = {1, 1, 0},
     acceleration = 0.005,
     turn_speed = 0.003,
     turning_speed_increases_exponentially_with_projectile_speed = true,
@@ -450,7 +455,7 @@ data:extend({
               action_delivery =
               {
                 type = "projectile",
-                projectile = "atomic-bomb-ground-zero-projectile",
+                projectile = "atomic-artillery-ground-zero-projectile",
                 starting_speed = 0.6 * 0.8,
                 starting_speed_deviation = nuke_shockwave_starting_speed_deviation
               }
@@ -468,7 +473,7 @@ data:extend({
               action_delivery =
               {
                 type = "projectile",
-                projectile = "atomic-bomb-wave",
+                projectile = "atomic-artillery-wave",
                 starting_speed = 0.5 * 0.7,
                 starting_speed_deviation = nuke_shockwave_starting_speed_deviation
               }
