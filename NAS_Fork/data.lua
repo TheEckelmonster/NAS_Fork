@@ -1,3 +1,3 @@
-require("prototypes.items.artillery-shell-atomic")
-require("prototypes.recipes.artillery-shell-atomic")
-require("prototypes.technologies.artillery-shell-atomic-data")
+require("prototypes.items.artillery-shell-nuclear-data")
+require("prototypes.recipes.artillery-shell-nuclear-data")
+require("prototypes.technologies.artillery-shell-nuclear-data")

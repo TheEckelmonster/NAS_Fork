@@ -1,3 +1,10 @@
+local mods = mods
+
+local sa_active = mods and mods["space-age"] and true
+local se_active = mods and mods["space-exploration"] and true
+
+if (se_active) then return end
+
 local technology = {
     type = "technology",
     name = "artillery-shell-nuclear",

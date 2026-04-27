@@ -21,13 +21,23 @@ local technology = {
             { name = "logistic-science-pack",   amount = 1, },
             { name = "chemical-science-pack",   amount = 1, },
             { name = "military-science-pack",   amount = 1, },
-            { name = "utility-science-pack",    amount = 1, },
-            sa_active and { name = "space-science-pack", amount = 1, } or nil,
-            sa_active and { name = "metallurgic-science-pack", amount = 1, } or nil,
         },
         order = "a-a-s",
     },
 }
+
+if (sa_active) then
+    table.insert(technology[1].ingredients, { name = "utility-science-pack",     amount = 1, })
+    table.insert(technology[1].ingredients, { name = "space-science-pack",       amount = 1, })
+    table.insert(technology[1].ingredients, { name = "metallurgic-science-pack", amount = 1, })
+elseif (se_active) then
+    table.insert(technology[1].ingredients, { name = "space-science-pack",      amount = 1, })
+    table.insert(technology[1].ingredients, { name = "production-science-pack", amount = 1, })
+    table.insert(technology[1].ingredients, { name = "se-rocket-science-pack",  amount = 1, })
+else
+    table.insert(technology[1].ingredients, { name = "utility-science-pack",    amount = 1, })
+    table.insert(technology[1].ingredients, { name = "production-science-pack", amount = 1, })
+end
 
 local settings = {}
 
