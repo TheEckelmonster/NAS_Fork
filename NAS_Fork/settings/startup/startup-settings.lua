@@ -17,6 +17,7 @@ data:extend({
     Startup_Settings_Constants.settings.ARTILLERY_SHELL_ATOMIC_RESULTS,
     Startup_Settings_Constants.settings.ARTILLERY_SHELL_ATOMIC_CRAFTING_MACHINE,
     Startup_Settings_Constants.settings.ARTILLERY_SHELL_ATOMIC_ADDITIONAL_CRAFTING_MACHINES,
+    Startup_Settings_Constants.settings.ARTILLERY_SHELL_ATOMIC_EMISSIONS_MULTIPLIER,
 })
 
 data:extend({
