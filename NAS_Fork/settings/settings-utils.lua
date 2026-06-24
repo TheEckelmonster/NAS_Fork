@@ -26,7 +26,7 @@ local possible_item_types = {
 
 local settings_utils = {}
 
-function settings_utils.get_additional_crafting_machines(params)
+function settings_utils.get_crafting_machines(params)
     params = params or {}
 
     local crafting_machines = {}
@@ -233,7 +233,7 @@ function settings_utils.get_recipe_results(params)
                             name = param,
                             amount_min = param_val * input_multiplier,
                             amount_max = param_max * input_multiplier,
-                            probability = (tonumber(param_probability) or 100) / 100,
+                            independent_probability = (tonumber(param_probability) or 100) / 100,
                             show_details_in_recipe_tooltip = false,
                             ignored_by_productivity = ignored_by_productivity[param].val or 2 ^ 16 - 1,
                             temperature = ingredient_type == "fluid" and tonumber(param_temp) or nil,
@@ -243,7 +243,7 @@ function settings_utils.get_recipe_results(params)
                         {
                             type = ingredient_type or "item",
                             name = param, amount = param_val * input_multiplier,
-                            probability = (tonumber(param_probability) or 100) / 100,
+                            independent_probability = (tonumber(param_probability) or 100) / 100,
                             show_details_in_recipe_tooltip = false,
                             ignored_by_productivity = ignored_by_productivity[param].val or 2 ^ 16 - 1,
                             temperature = ingredient_type == "fluid" and tonumber(param_temp) or nil,
@@ -258,7 +258,7 @@ function settings_utils.get_recipe_results(params)
                             name = param,
                             amount_min = param_val * input_multiplier,
                             amount_max = param_max * input_multiplier,
-                            probability = (tonumber(param_probability) or 100) / 100,
+                            independent_probability = (tonumber(param_probability) or 100) / 100,
                             show_details_in_recipe_tooltip = false,
                             temperature = ingredient_type == "fluid" and tonumber(param_temp) or nil,
                             percent_spoiled = param_spoiled and (tonumber(param_spoiled) or 0) / 100 or nil,
@@ -268,7 +268,7 @@ function settings_utils.get_recipe_results(params)
                             type = ingredient_type or "item",
                             name = param,
                             amount = param_val * input_multiplier,
-                            probability = (tonumber(param_probability) or 100) / 100,
+                            independent_probability = (tonumber(param_probability) or 100) / 100,
                             show_details_in_recipe_tooltip = false,
                             temperature = ingredient_type == "fluid" and tonumber(param_temp) or nil,
                             percent_spoiled = param_spoiled and (tonumber(param_spoiled) or 0) / 100 or nil,
