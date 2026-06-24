@@ -36,7 +36,9 @@ function tbl.create_recipe(params)
         enabled = enabled,
         icon = icon,
         icons = icons,
-        category = Data_Utils.get_startup_setting({ setting = Startup_Settings_Constants.settings[setting_name .. "_CRAFTING_MACHINE"].name, }),
+        categories = Setting_Utils.get_crafting_machines({
+            default_value = Data_Utils.get_startup_setting({ setting = Startup_Settings_Constants.settings[setting_name .. "_CRAFTING_MACHINES"].name, }),
+        }),
         subgroup = subgroup,
         order = order,
         energy_required = Data_Utils.get_startup_setting({ setting = Startup_Settings_Constants.settings[setting_name .. "_CRAFTING_TIME"].name, }),
@@ -47,9 +49,6 @@ function tbl.create_recipe(params)
         results = Setting_Utils.get_recipe_results({
             recipe_setting = Startup_Settings_Constants.settings[setting_name .. "_RESULTS"],
         }) or Startup_Settings_Constants.settings[setting_name .. "_RESULTS"].results,
-        additional_categories = Setting_Utils.get_additional_crafting_machines({
-            default_value = Data_Utils.get_startup_setting({ setting = Startup_Settings_Constants.settings[setting_name .. "_ADDITIONAL_CRAFTING_MACHINES"].name, }),
-        }),
         crafting_machine_tint = crafting_machine_tint,
         auto_recycle = auto_recycle,
     }
