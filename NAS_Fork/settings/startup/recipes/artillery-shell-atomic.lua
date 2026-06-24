@@ -13,7 +13,7 @@ local recipes = {
         setting  = "ARTILLERY_SHELL_ATOMIC",
         name = "artillery-shell-atomic",
         energy_required = 50,
-        crafting_machine = "crafting",
+        crafting_machines = { "crafting", },
         ingredients = {
             { type = "item",  name = "artillery-shell", amount = 1, },
             { type = "item",  name = "uranium-235",     amount = uranium_235, },
@@ -60,33 +60,13 @@ for i = 1, #recipes, 1 do
         auto_trim = true,
     }
     settings[#settings+1] = {
-        setting = recipes[i].setting  .. "_CRAFTING_MACHINE",
+        setting = recipes[i].setting  .. "_CRAFTING_MACHINES",
         type = "string-setting",
-        name = prefix .. recipes[i].name .. "-crafting-machine",
+        name = prefix .. recipes[i].name .. "-crafting-machines",
         setting_type = "startup",
-        order = (recipes[i].order or "") .. ("c[recipe]-c[" .. recipes[i].name .. "]-e[recipe]-i[crafting-machine]"),
-        default_value = recipes[i].crafting_machine or "crafting-with-fluid",
-        allowed_values =
-        {
-            "crafting",
-            "advanced-crafting",
-            "smelting",
-            "chemistry",
-            "crafting-with-fluid",
-            "oil-processing",
-            "rocket-building",
-            "centrifuging",
-            "basic-crafting",
-        },
-    }
-    settings[#settings+1] = {
-        setting = recipes[i].setting  .. "_ADDITIONAL_CRAFTING_MACHINES",
-        type = "string-setting",
-        name = prefix .. recipes[i].name .. "-additional-crafting-machines",
-        setting_type = "startup",
-        order = (recipes[i].order or "") .. ("c[recipe]-c[" .. recipes[i].name .. "]-e[recipe]-k[additional-crafting-machines]"),
-        default_value = recipes[i].additional_crafting_machines and recipes[i].additional_crafting_machines[1] or "",
-        allow_blank = true,
+        order = (recipes[i].order or "") .. ("c[recipe]-c[" .. recipes[i].name .. "]-e[recipe]-k[-crafting-machines]"),
+        default_value = recipes[i].crafting_machines and recipes[i].crafting_machines[1] or "",
+        allow_blank = false,
         auto_trim = true,
     }
     settings[#settings+1] = {
