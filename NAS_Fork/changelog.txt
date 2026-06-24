@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 2026-06-24
+  Changes:
+    - Updated to Factorio version 2.1.7
+    - Removed "(Default) crafting machine" setting
+    - Removed "Additional crafting machines" setting
+    - Added "Crafting machines" setting
+---------------------------------------------------------------------------------------------------
 Version: 0.3.0
 Date: 2026-04-27
   Features:
