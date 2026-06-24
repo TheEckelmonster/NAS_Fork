@@ -4,7 +4,7 @@
 	"factorio_version": "2.1",
 	"title": "Configurable Nuclear Artillery Shell",
 	"author": "TheEckelmonster",
-	"description": "Fork of \"Nuclear Artillery Shell\" by Aephiex, updated to 2.0.\n\nIncludes several configurable settings to allow for customization of the item, recipe, and technology.",
+	"description": "Fork of \"Nuclear Artillery Shell\" by Aephiex, updated to 2.1.\n\nIncludes several configurable settings to allow for customization of the item, recipe, and technology.",
     "dependencies": [
 		"base >= 2.1.7",
         "TheEckelmonster-core-library >= 1.0.0",
